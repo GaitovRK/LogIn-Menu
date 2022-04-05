@@ -12,7 +12,6 @@ class ViewController: UIViewController {
 
     @IBOutlet var loginTextField: UITextField!
     @IBOutlet var passwordTextField: UITextField!
-    @IBOutlet var loginLabel: UILabel!
     @IBOutlet var loginButton: UIButton!
     
     var login = " "
@@ -23,9 +22,9 @@ class ViewController: UIViewController {
         loginTextField.delegate = self
         passwordTextField.delegate = self
     }
-        
     
     @IBAction func loginButtonPressed() {
+        
         login = loginTextField.text ?? " "
         password = passwordTextField.text ?? " "
         
@@ -33,13 +32,13 @@ class ViewController: UIViewController {
         alertController.addAction(UIAlertAction(title: "Close", style: .default))
         
         if (login == "Login") && (password == "Password") {
-            alertController.title = "Correct!"
-            alertController.message = "Welcome!"
+            self.performSegue(withIdentifier: "loginSegue", sender: self)
         } else {
             alertController.title = "Error!"
             alertController.message = "You have no access!"
+            self.present(alertController, animated: true, completion: nil)
         }
-        self.present(alertController, animated: true, completion: nil)
+        
     }
     
 }

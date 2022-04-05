@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="1Vq-0G-J1t">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
@@ -40,59 +40,70 @@
                                 </subviews>
                             </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOG IN" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Xx4-o8-s7W">
-                                <rect key="frame" x="174.5" y="84" width="65.5" height="24"/>
+                                <rect key="frame" x="174.5" y="170" width="65.5" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <viewLayoutGuide key="safeArea" id="Odx-fq-bNI"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Xx4-o8-s7W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Jj1-xO-26r"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eiY-WG-aei" secondAttribute="trailing" constant="16" id="Qbh-w4-V9X"/>
-                            <constraint firstItem="Xx4-o8-s7W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="dDN-64-e7G"/>
+                            <constraint firstItem="Xx4-o8-s7W" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="D89-nX-5IT"/>
+                            <constraint firstItem="Xx4-o8-s7W" firstAttribute="centerX" secondItem="Odx-fq-bNI" secondAttribute="centerX" id="Jj1-xO-26r"/>
+                            <constraint firstItem="Odx-fq-bNI" firstAttribute="trailing" secondItem="eiY-WG-aei" secondAttribute="trailing" constant="16" id="Qbh-w4-V9X"/>
                             <constraint firstItem="eiY-WG-aei" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="e91-JB-071"/>
-                            <constraint firstItem="eiY-WG-aei" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="g1J-ce-iGz"/>
+                            <constraint firstItem="eiY-WG-aei" firstAttribute="leading" secondItem="Odx-fq-bNI" secondAttribute="leading" constant="16" id="g1J-ce-iGz"/>
+                            <constraint firstItem="Xx4-o8-s7W" firstAttribute="top" secondItem="Odx-fq-bNI" secondAttribute="top" constant="30" id="h34-3P-oS1"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="F3g-Y2-rpa">
+                        <barButtonItem key="backBarButtonItem" title="Login" id="BKk-pj-3QZ"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="loginButton" destination="Jw0-aK-p7D" id="bfM-BI-h8k"/>
                         <outlet property="loginTextField" destination="OO1-X0-WUN" id="kQe-fy-hGU"/>
                         <outlet property="passwordTextField" destination="ytI-Xz-fKf" id="f2Y-3W-dSH"/>
+                        <segue destination="AGH-gd-27A" kind="show" identifier="loginSegue" id="1g8-jH-nnt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="20" y="80"/>
+            <point key="canvasLocation" x="2749.275362318841" y="79.6875"/>
         </scene>
-        <!--Menu View Controller-->
-        <scene sceneID="Za1-5U-34h">
+        <!--Welcome!-->
+        <scene sceneID="5zr-GS-7Yg">
             <objects>
-                <viewController id="ihj-Jl-ZwO" customClass="MenuViewController" customModule="LogIn_Menu" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="at2-lE-ZlW">
+                <viewController id="AGH-gd-27A" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iyR-qi-rSC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAu-b3-mK6">
-                                <rect key="frame" x="186" y="135" width="42" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                        <viewLayoutGuide key="safeArea" id="wrj-Mi-dd4"/>
+                        <viewLayoutGuide key="safeArea" id="wvH-Vx-5Dq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="8ak-rB-ICE"/>
-                    <connections>
-                        <outlet property="menuLabel" destination="dAu-b3-mK6" id="OtT-4n-ecO"/>
-                    </connections>
+                    <navigationItem key="navigationItem" title="Welcome!" id="lWI-0f-vnX"/>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="gKm-eX-jEB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9pR-Fh-T2W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="980" y="80"/>
+            <point key="canvasLocation" x="3704" y="80"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="P70-vx-182">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="1Vq-0G-J1t" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" largeTitles="YES" id="Wzk-BB-842">
+                        <rect key="frame" x="0.0" y="44" width="414" height="96"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="YcE-ST-7TL"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="w4E-4S-XgQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1839.1304347826087" y="79.6875"/>
         </scene>
     </scenes>
     <resources>
